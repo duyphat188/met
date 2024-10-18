@@ -1,0 +1,80 @@
+﻿@model baicuoiky_zanhanh.Models.TRE
+
+@{
+    ViewBag.Title = "DeleteTre";
+}
+
+<h2>DeleteTre</h2>
+
+<h3>Are you sure you want to delete this?</h3>
+<div>
+    <h4>TRE</h4>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.MATRE)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.MATRE)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.TENTRE)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.TENTRE)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.NAMSINH)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.NAMSINH)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.MALOP)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.MALOP)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.TENLOP)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.TENLOP)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.PHAI)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.PHAI)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.DCHI)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.DCHI)
+        </dd>
+
+    </dl>
+
+    @using (Html.BeginForm()) {
+        @Html.AntiForgeryToken()
+
+        <div class="form-actions no-color">
+            <input type="submit" value="Delete" class="btn btn-default" /> |
+            @Html.ActionLink("Back to List", "Index")
+        </div>
+    }
+</div>

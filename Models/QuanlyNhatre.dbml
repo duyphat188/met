@@ -1,0 +1,30 @@
+﻿<?xml version="1.0" encoding="utf-8"?><Database Name="Quanlinhatre" Class="QuanlyNhatreDataContext" xmlns="http://schemas.microsoft.com/linqtosql/dbml/2007">
+  <Table Name="dbo.BAOMAU" Member="BAOMAUs">
+    <Type Name="BAOMAU">
+      <Column Name="HOTEN" Type="System.String" DbType="NVarChar(30)" CanBeNull="true" />
+      <Column Name="MABM" Type="System.Int32" DbType="Int" IsPrimaryKey="true" CanBeNull="true" />
+      <Column Name="PHAI" Type="System.String" DbType="NVarChar(3)" CanBeNull="true" />
+      <Column Name="LUONG" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="MALOP" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="TENLOP" Type="System.String" DbType="NVarChar(4)" CanBeNull="true" />
+      <Column Name="DIACHI" Type="System.String" DbType="NVarChar(30)" CanBeNull="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.LOP" Member="LOPs">
+    <Type Name="LOP">
+      <Column Name="TENLOP" Type="System.String" DbType="NVarChar(4)" CanBeNull="true" />
+      <Column Name="MALOP" Type="System.String" DbType="Char(6)" IsPrimaryKey="true" CanBeNull="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.TRE" Member="TREs">
+    <Type Name="TRE">
+      <Column Name="TENTRE" Type="System.String" DbType="NVarChar(30) NOT NULL" CanBeNull="false" />
+      <Column Name="MATRE" Type="System.Int32" DbType="Int" IsPrimaryKey="true" CanBeNull="true" />
+      <Column Name="NAMSINH" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="MALOP" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="TENLOP" Type="System.String" DbType="NVarChar(4)" CanBeNull="true" />
+      <Column Name="PHAI" Type="System.String" DbType="NVarChar(3)" CanBeNull="true" />
+      <Column Name="DCHI" Type="System.String" DbType="NVarChar(30)" CanBeNull="true" />
+    </Type>
+  </Table>
+</Database>

@@ -1,0 +1,115 @@
+﻿@model baicuoiky_zanhanh.Models.BAOMAU
+
+@{
+    ViewBag.Title = "CreateBm";
+}
+
+
+<html>
+<head>
+    <style>
+
+        .table {
+            border: 5px solid #B03060;
+            width: 100%;
+            text-align: center;
+            background-color: #FFE3E7;
+        }
+
+        th, td {
+            padding: 10px;
+        }
+
+        th {
+            font-size: 15px;
+        }
+    </style>
+</head>
+<body style="background-color:#FFB6C1">
+    <img src="https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEiDyUh5Fws045Zr0bx7auVPAgjjAe82k5y7KvmDSR1TA-i55j99ZzyfxskHtgdMOUBt4o4XJUzlGsQiGUIsMPgYaMKiIrcW5CApEvgv4PQvaGl0usA2DS1UmrsJT4V09bgUcNdTRxaUGHoPwEd1-Hhy37stSWMysbdkkplzUOyrD-B_H1cFE2lPKKGebJk/w1040-h521/nen.png" />
+    <table class="table">
+        <th>
+            <h2 style="text-align: center; font-size:40px; font-family: 'Times New Roman'; font-weight: bold;">Thêm Bảo Mẫu</h2>
+        </th>
+    </table>
+
+
+    @using (Html.BeginForm())
+    {
+        @Html.AntiForgeryToken()
+
+        <div class="form-horizontal">
+            <h4>BAOMAU</h4>
+            <hr />
+            @Html.ValidationSummary(true, "", new { @class = "text-danger" })
+            <div class="form-group">
+                @Html.LabelFor(model => model.HOTEN, htmlAttributes: new { @class = "control-label col-md-2" })
+                <div class="col-md-10">
+                    @Html.EditorFor(model => model.HOTEN, new { htmlAttributes = new { @class = "form-control" } })
+                    @Html.ValidationMessageFor(model => model.HOTEN, "", new { @class = "text-danger" })
+                </div>
+            </div>
+
+            <div class="form-group">
+                @Html.LabelFor(model => model.PHAI, htmlAttributes: new { @class = "control-label col-md-2" })
+                <div class="col-md-10">
+                    <select name="PHAI" class="form-control">
+                        <option value="Nam"> Nam</option>
+                        <option value="Nữ"> Nữ</option>
+                    </select>
+                </div>
+            </div>
+
+            <div class="form-group">
+                @Html.LabelFor(model => model.LUONG, htmlAttributes: new { @class = "control-label col-md-2" })
+                <div class="col-md-10">
+                    @Html.EditorFor(model => model.LUONG, new { htmlAttributes = new { @class = "form-control" } })
+                    @Html.ValidationMessageFor(model => model.LUONG, "", new { @class = "text-danger" })
+                </div>
+            </div>
+
+            <div class="form-group">
+                @Html.LabelFor(model => model.MALOP, htmlAttributes: new { @class = "control-label col-md-2" })
+                <div class="col-md-10">
+                    <select name="MALOP" class="form-control">
+                        <option>201220</option>
+                        <option>201221</option>
+                        <option>201222</option>
+                    </select>
+                </div>
+            </div>
+
+            <div class="form-group">
+                @Html.LabelFor(model => model.TENLOP, htmlAttributes: new { @class = "control-label col-md-2" })
+                <div class="col-md-10">
+                    <select name="TENLOP" class="form-control">
+                        <option value="Mầm"> Mầm </option>
+                        <option value="Chồi"> Chồi </option>
+                        <option value="Lá"> Lá </option>
+                    </select>
+                </div>
+            </div>
+
+            <div class="form-group">
+                @Html.LabelFor(model => model.DIACHI, htmlAttributes: new { @class = "control-label col-md-2" })
+                <div class="col-md-10">
+                    @Html.EditorFor(model => model.DIACHI, new { htmlAttributes = new { @class = "form-control" } })
+                    @Html.ValidationMessageFor(model => model.DIACHI, "", new { @class = "text-danger" })
+                </div>
+            </div>
+
+            <div class="form-group">
+                <div class="col-md-offset-2 col-md-10">
+                    <input type="submit" value="Create" class="btn btn-default" />
+                </div>
+            </div>
+        </div>
+    }
+
+ 
+
+    @section Scripts {
+        @Scripts.Render("~/bundles/jqueryval")
+    }
+   </body>
+</html>

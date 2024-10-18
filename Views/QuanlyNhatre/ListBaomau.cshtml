@@ -1,0 +1,97 @@
+﻿@model IEnumerable<baicuoiky_zanhanh.Models.BAOMAU>
+
+@{
+    ViewBag.Title = "ListBaomau";
+}
+<html>
+<head>
+    <style>
+
+        .table {
+            border: 5px solid #B03060;
+            width: 100%;
+            text-align: center;
+            background-color: #FFE3E7;
+        }
+
+        th, td {
+            padding: 10px;
+        }
+
+        th {
+            font-size: 15px;
+        }
+    </style>
+</head>
+<body style="background-color:#FFB6C1">
+    <img src="https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEiDyUh5Fws045Zr0bx7auVPAgjjAe82k5y7KvmDSR1TA-i55j99ZzyfxskHtgdMOUBt4o4XJUzlGsQiGUIsMPgYaMKiIrcW5CApEvgv4PQvaGl0usA2DS1UmrsJT4V09bgUcNdTRxaUGHoPwEd1-Hhy37stSWMysbdkkplzUOyrD-B_H1cFE2lPKKGebJk/w1040-h521/nen.png" />
+    <table class="table">
+        <th>
+            <h2 style="text-align: center; font-size:40px; font-family: 'Times New Roman'; font-weight: bold;">Danh sách bảo mẫu</h2>
+        </th>
+    </table>
+    <p>
+
+    </p>
+    <table class="table">
+        <tr>
+            <th>
+                Mã bảo mẫu
+            </th>
+            <th>
+                Họ và tên
+            </th>
+            <th>
+                Phái
+            </th>
+            <th>
+                Lương
+            </th>
+            <th>
+                Mã Lớp
+            </th>
+            <th>
+                Tên lớp
+            </th>
+            <th>
+                Địa chỉ
+            </th>
+            <th></th>
+        </tr>
+
+        @foreach (var item in Model)
+        {
+            <tr>
+                <td>
+                    @Html.DisplayFor(modelItem => item.MABM)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.HOTEN)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.PHAI)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.LUONG)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.MALOP)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.TENLOP)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.DIACHI)
+                </td>
+                <td>
+                    @Html.ActionLink("Sửa", "EditBm", new { MABM = item.MABM }) |
+                    @Html.ActionLink("Xoá", "DeleteBm", new { MABM = item.MABM }) |
+                    @Html.ActionLink("Thêm Bảo mẫu", "CreateBm")
+                </td>
+            </tr>
+        }
+
+    </table>
+    &emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;<img src="https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEjX21iGiUHbE0CyAelYT9iceo2o1TWsE2AsL_xqSYfGvmyaKV-9haEP5C0QqnJQdVxMZa2y-XH0sgAuBiRMJ4qhem3AHOQAtV0LCY86L8AMMGMzmBrWMIHB4QqZDAiBygLKxYRzDntZ4bKeZE4uZpDBT3tQeO384_S4xI2H56P9xjBOnniz5OIbhWBrRA4/w785-h419/ACTUAL%20DESIGN%20-%20This%20is%20what%20we%20publish!.png" width="800" height="auto" />
+</body>
+</html>

@@ -1,0 +1,162 @@
+﻿@model IEnumerable<baicuoiky_zanhanh.Models.LOP>
+
+@{
+    ViewBag.Title = "ListLop";
+}
+<html>
+<head>
+    <style>
+        .img {
+            width: 1100px;
+            height: auto;
+        }
+
+
+        .menu {
+            background-color: #DB7093;
+        }
+
+            .menu ul {
+                list-style-type: none;
+                margin: 0;
+                padding: 0;
+            }
+
+            .menu li {
+                display: inline-block;
+            }
+
+            .menu li a {
+                    display: block;
+                    color: #FFFF00;
+                    text-decoration: none;
+                    padding: 10px 20px;
+            }
+
+                .menu li a:hover {
+                    background-color: #B03060;
+                }
+
+
+            .zoomable {
+                transition: transform 0.3s;
+            }
+
+            .zoomable:hover {
+                transform: scale(1.2);
+            }
+
+        .table {
+            border: 5px solid #B03060;
+            width: 100%;
+            text-align: center;
+            background-color: #FFE3E7;
+        }
+
+            th, td {
+                padding: 10px;
+            }
+
+            th {
+                font-size: 15px;
+            }
+        .nut {
+            background-color: #DB7093;
+            border-radius: 5px;
+            text-decoration: none;
+        }
+
+        
+    </style>
+</head>
+<body style="background-color:#FFB6C1">
+    <div class="img">
+        <img src="https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEiDyUh5Fws045Zr0bx7auVPAgjjAe82k5y7KvmDSR1TA-i55j99ZzyfxskHtgdMOUBt4o4XJUzlGsQiGUIsMPgYaMKiIrcW5CApEvgv4PQvaGl0usA2DS1UmrsJT4V09bgUcNdTRxaUGHoPwEd1-Hhy37stSWMysbdkkplzUOyrD-B_H1cFE2lPKKGebJk/w1040-h521/nen.png" />
+    </div>
+    <div class="menu" style="font-size:15px">
+        <ul>
+            <strong>
+            <li><a href="#Q">TỔNG QUÁT</a></li>
+            <li><a href="#N">GÓC ÔN TẬP</a></li>
+            <li><a href="#P">DANH SÁCH LỚP</a></li>
+            </strong>
+        </ul>
+    </div>
+    <div id="Q">
+        &emsp;&emsp;&emsp;&emsp;&emsp;&emsp;<img src="https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEgyWcLXRipROq5sx21wPrWyJfJ4yrpgTHh-goPfQzBHfVVcjIHzuyIG1P_nRFsUGVTpI4YxFVvOTC4mz54MkhPiW39JU_jCBAultl68kTZc_j97R7n9u2yUu97s2-NIXaqFnTKsE750i25hyphenhyphenuCBmUZao8YzPc96NiD0NQS4QnNt5l7eM_MYJMAmmSN9Q9Y/w811-h406/1.png" width="900" height="auto" /><br>
+        &emsp;&emsp;&emsp;&emsp;&emsp;&emsp;<img src="https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEhuusy3B2EqAQPVWD_9-GfiajrPs0e2G_-iBEOenEShKCRP81zYDMJtwHRMkq-vUQvSWe_IMyhhfvWGetnok1IMvi9yM8Oyb5La8T4xQ7coE_q_StkB2KgvAiEC2dcegFKl0mK0Njilk3zuV3FHJOs14R8OUBfe7fFwIubJ8a3dFh22O0UsGW6J1uAv4Ic/w804-h402/2.png" width="900" height="auto" /><br>
+        &emsp;&emsp;&emsp;&emsp;&emsp;&emsp;<img src="https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEhaDOYNAEtMd2e2qfDCQazZ1aQ7RlXcLVfUHLZtSy50UE-JqhOC_qO6firSjkUnQ9rMGq5k6G9_nAPPUUpuaHY0h7Q96HhXI2InRYhQYB_Db2k7WeYU-Mg8gdX3tJPsJBouC0FTQHrxvWZA-jB-J3IPUfUo1cdp2ldlBecMK0gZkwKco0dOsPQYS9JoVss/w820-h410/3.png" width="900" height="auto" /><br>
+    </div>
+    <br>
+    <div id="N" style="text-align:center">
+        <table style=" bordercolor:transparent; bgcolor:transparent;" width="1100" height="320">
+            <tr>
+                <th>
+                    <a href="https://youtu.be/F7Knymx-u_4?si=3GA-oOkidtc2-5eB">
+                        <img src="https://blogger.googleusercontent.com/img/a/AVvXsEh11CiHxDUgXs3gyWkpu9M6Ulf_U_v6p5bZIKDnZKl2ls_b-wNG6xTochThT0COgqc7leI54POVCC_KBpFu6c5zH1-pXUTMxQFhwyhpAa0ldRd0EmSghP9tWU3Zk37HGZzQ1lpbZ_Y5O-zk5NyxvUayHZDwAJNIKbrffNoJl46jLO0aoPfTISgfiIDv8S8=w559-h311" width="300" height="180" alt="demso" class="zoomable">
+                    </a>
+                </th>
+                <th>
+                    <a href="https://youtu.be/hzSa-dUKl5o?si=7DiKdBBmmTJoL_Ye">
+                        <img src="https://blogger.googleusercontent.com/img/a/AVvXsEjn_4OsXrjp3kQTvM6TPV1gWMCqx3E-9rLhe98AGHsvoCCgbKbSY9qYLmHmkB7fMoaKYzeo4F8DoS3l0fvieEymND7fHfoSWg5Wwvt6G_eZ61rEC26dqZKZDf5C9hFJEGyondogCQUcAcRR71I8yd1YU7hwJYYBFRhKZuVAgs5McLJSDuGWWYfdvc90eJI=w555-h310" width="300" height="180" alt="chucai" class="zoomable">
+                    </a>
+                </th>
+                <th>
+                    <a href="https://youtu.be/gDb6MCGUShI?si=AzFYKX1kxmfkCwuF">
+                        <img src="https://blogger.googleusercontent.com/img/a/AVvXsEh6UhAcrSrLEK0WJk8LBoYAI8xLpuBZNRWkiKeWA1brUGxfcv7MFdTiK8rQKxV6UrejO0Yje5l9JYR0-Ld6yt0pdjYSNOG0G-suCmmoVdcEdE_BbxfcYPkR1bKYycvu39PO5l6UsqpVgFXib-45dT_Dh_NedJ8NvPPawFcjL1xtSfC9UBcBoUPuH1RiVS0=w553-h309" width="300" height="180" alt="mausac" class="zoomable">
+                    </a>
+                </th>
+            </tr>
+        </table>
+    </div>
+
+    <table class="table">
+        <th>
+            <h2 style="text-align: center; font-size:40px; font-family: 'Times New Roman'; font-weight: bold;">Danh sách lớp</h2>
+        </th>
+    </table>
+    <br>
+    @using (Html.BeginForm("Searchlop", "LOP", FormMethod.Get, new { @class = "form-inline" }))
+    {
+        <div class="d-flex">
+            <div class="form-group mr-2">
+
+                <input type="text" name="searchName" class="form-control" placeholder="Tìm kiếm theo Tên" />
+            </div>
+            &emsp;<button type="submit" class="nut">Tìm kiếm</button>
+        </div>
+    }
+    <br>
+    <table id="P" class="table">
+        <tr>
+            <th>
+                Tên lớp
+            </th>
+            <th>
+                Mã lớp
+            </th>
+            <th>
+                Xem thêm
+            </th>
+        </tr>
+
+        @foreach (var item in Model)
+        {
+            <tr>
+                <td>
+                    @Html.DisplayFor(modelItem => item.TENLOP)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.MALOP)
+                </td>
+                <td>
+                    @Html.ActionLink("Xem Danh Sách Trẻ", "ListTre", new { MALOP = item.MALOP }) |
+                    @Html.ActionLink("Xem Danh Sách Bảo Mẫu", "ListBaomau", new { MALOP = item.MALOP })
+</td>
+            </tr>
+        }
+
+    </table>
+    &emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;<img src="https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEjX21iGiUHbE0CyAelYT9iceo2o1TWsE2AsL_xqSYfGvmyaKV-9haEP5C0QqnJQdVxMZa2y-XH0sgAuBiRMJ4qhem3AHOQAtV0LCY86L8AMMGMzmBrWMIHB4QqZDAiBygLKxYRzDntZ4bKeZE4uZpDBT3tQeO384_S4xI2H56P9xjBOnniz5OIbhWBrRA4/w785-h419/ACTUAL%20DESIGN%20-%20This%20is%20what%20we%20publish!.png" width="800" height="auto" />
+</body>
+</html>
